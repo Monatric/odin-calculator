@@ -3,4 +3,47 @@
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
+    outline: solid;
+    /* border: 1px black solid; */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+    height: 400px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-grow: 1; */
+    flex-direction: column;
+    min-width: 225px;
+}
+
+.display {
+    width: 100%;
+    min-height: 100px;
+}
+
+.btn-row {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    min-height: 50px;
+}
+
+.btn-box {
+    width: 100%;
 }
