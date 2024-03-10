@@ -3,8 +3,8 @@
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
-    outline: solid;
-    /* border: 1px black solid; */
+    /* outline: solid; */
+    border: 1px black solid;
 }
 
 body {
@@ -33,6 +33,9 @@ body {
 }
 
 .display {
+    display: flex;
+    justify-content: end;
+    align-items: end;
     width: 100%;
     min-height: 100px;
 }
@@ -42,8 +45,22 @@ body {
     flex-grow: 1;
     width: 100%;
     min-height: 50px;
+    gap: 8px;
 }
 
 .btn-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    border-radius: 8px;
 }
+
+/* .btn-box.equal {
+    flex: 2 1 0%;
+
+}
+
+.btn-box.zero, .btn-box.divide {
+    flex: 1 1 0%;
+} */
