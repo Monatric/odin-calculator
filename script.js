@@ -56,65 +56,91 @@ btnRows.forEach((row) => {
             // 0-9
             case 'zer':
                 display.textContent += '0';
-                console.log('this is zero')
+                displayValue += '0';
                 break;
             case 'one':
                 display.textContent += '1';
-                console.log('this is one')
+                displayValue += '1';
+                console.log(displayValue)
                 break;
             case 'two':
                 display.textContent += '2';
+                displayValue += '2';
                 console.log('this is two')
                 break;
             case 'thr':
                 display.textContent += '3';
+                displayValue += '3';
                 console.log('this is three')
                 break;
             case 'fou':
                 display.textContent += '4';
+                displayValue += '4';
                 console.log('this is four')
                 break;
             case 'fiv':
                 display.textContent += '5';
+                displayValue += '5';
                 console.log('this is five')
                 break;
             case 'six':
                 display.textContent += '6';
+                displayValue += '6';
                 console.log('this is six')
                 break;
             case 'sev':
                 display.textContent += '7';
+                displayValue += '7';
                 console.log('this is seven')
                 break;
             case 'eig':
                 display.textContent += '8';
+                displayValue += '8';
                 console.log('this is eight')
                 break;
             case 'nin':
                 display.textContent += '9';
+                displayValue += '9';
                 console.log('this is nine')
                 break;
             
             // operators
             case 'plu':
                 display.textContent += '+';
-                console.log('this is nine')
+                operator = '+';
+                firstNum = parseInt(displayValue);
+                displayValue = 0;
+                console.log(operator)
                 break;
             case 'min':
                 display.textContent += '-';
+                operator = '-';
+                firstNum = parseInt(displayValue);
+                displayValue = 0;
                 console.log('this is nine')
                 break;
             case 'mul':
                 display.textContent += '*';
+                operator = '*';
+                firstNum = parseInt(displayValue);
+                displayValue = 0;
                 console.log('this is nine')
                 break;
             case 'div':
                 display.textContent += '/';
+                operator = '/';
+                firstNum = parseInt(displayValue);
+                displayValue = 0;
                 console.log('this is nine')
                 break;
             case 'equ':
-                display.textContent += '=';
-                console.log('this is nine')
+                secondNum = parseInt(displayValue);
+                displayValue = 0;
+                let results = operate(firstNum, operator, secondNum);
+                display.textContent = results;
+                firstNum = 0;
+                operator = '';
+                secondNum = 0;
                 break;
             case 'cle':
                 display.textContent = '';
@@ -122,43 +148,6 @@ btnRows.forEach((row) => {
         }
     })
 })
-
-// btnRows.addEventListener('click', (event) => {
-//     let target = event.target;
-
-//     switch (target.id) {
-//         case 'sev':
-//             console.log('this is seven')
-//             break;
-//         case 'eig':
-//             console.log('this is eight')
-//             break;
-//         case 'fou':
-//             console.log('this is four')
-//     }
-// })
-
-console.log(btnRows)
-// let calcBtnsContent = calcBtns.textContent;
-// if (calcBtns === '7') {
-//     console.log('works')
-// }
-
-// calcBtns.addEventListener('click', () => {
-    
-//     switch (calcBtnsContent) {
-//         case '7':
-//             display.textContent += '7';
-//             console.log('7')
-//             break;
-//         case '8':
-//             display.textContent = '8';
-//             console.log('8')
-//             break;
-//     }
-// })
-
-// console.log(calcBtns)
 
 
 console.log(operate(3, '*', 5))
