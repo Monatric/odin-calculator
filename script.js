@@ -34,4 +34,30 @@ function operate(firstNum, operator, secondNum) {
 // console.log(subtract(1, 2))
 // console.log(multiply(2, 1))
 // console.log(divide(2, 8))
+
+// different attempt 2
+// let calcBtns = document.querySelector('.btn-box');
+// let calcBtnsContent = calcBtns.textContent;
+// let display = document.querySelector('.display');
+// if (calcBtns === '7') {
+//     console.log('works')
+// }
+
+// calcBtns.addEventListener('click', () => {
+    
+//     switch (calcBtnsContent) {
+//         case '7':
+//             display.textContent = '7';
+//             console.log('7')
+//             break;
+//         case '8':
+//             display.textContent = '8';
+//             console.log('8')
+//             break;
+//     }
+// })
+
+console.log(calcBtns)
+
+
 console.log(operate(3, '*', 5))
