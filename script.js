@@ -65,29 +65,5 @@ console.log(calcBtnsEqu)
 // let calcBtnsContent = calcBtns.textContent;
 
 
-//different attempt 2
-// let calcBtns = document.querySelector('');
-// let calcBtnsContent = calcBtns.textContent;
-// let display = document.querySelector('.display');
-// // if (calcBtns === '7') {
-// //     console.log('works')
-// // }
-
-// calcBtns.addEventListener('click', () => {
-    
-//     switch (calcBtnsContent) {
-//         case '7':
-//             display.textContent += '7';
-//             console.log('7')
-//             break;
-//         case '8':
-//             display.textContent = '8';
-//             console.log('8')
-//             break;
-//     }
-// })
-
-//console.log(calcBtns)
-
 
 console.log(operate(3, '*', 5))
