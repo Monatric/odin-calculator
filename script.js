@@ -36,7 +36,6 @@ function operate(firstNum, operator, secondNum) {
 // console.log(divide(2, 8))
 
 // attempt 1
-let display = document.querySelector('.display');
 
 // not sure if this works so test
 let displayValue = 0;
@@ -47,28 +46,28 @@ console.log(calcBtnsEqu)
 
 
 //different attempt 2
-// let calcBtns = document.querySelector('');
-// let calcBtnsContent = calcBtns.textContent;
-// let display = document.querySelector('.display');
-// // if (calcBtns === '7') {
-// //     console.log('works')
-// // }
+let calcBtns = document.querySelector('');
+let calcBtnsContent = calcBtns.textContent;
+let display = document.querySelector('.display');
+// if (calcBtns === '7') {
+//     console.log('works')
+// }
 
-// calcBtns.addEventListener('click', () => {
+calcBtns.addEventListener('click', () => {
     
-//     switch (calcBtnsContent) {
-//         case '7':
-//             display.textContent += '7';
-//             console.log('7')
-//             break;
-//         case '8':
-//             display.textContent = '8';
-//             console.log('8')
-//             break;
-//     }
-// })
+    switch (calcBtnsContent) {
+        case '7':
+            display.textContent += '7';
+            console.log('7')
+            break;
+        case '8':
+            display.textContent = '8';
+            console.log('8')
+            break;
+    }
+})
 
-//console.log(calcBtns)
+console.log(calcBtns)
 
 
 console.log(operate(3, '*', 5))
