@@ -38,25 +38,6 @@ function operate(firstNum, operator, secondNum) {
 // attempt 1
 let display = document.querySelector('.display');
 
-let calcBtnsZer = document.querySelector('.zer');
-let calcBtnsOne = document.querySelector('.one');
-let calcBtnsTwo = document.querySelector('.two');
-let calcBtnsThr = document.querySelector('.thr');
-let calcBtnsFou = document.querySelector('.fou');
-let calcBtnsFiv = document.querySelector('.fiv');
-let calcBtnsSix = document.querySelector('.six');
-let calcBtnsSev = document.querySelector('.sev');
-let calcBtnsEig = document.querySelector('.eig');
-let calcBtnsNin = document.querySelector('.nin');
-
-
-let calcBtnsPlu = document.querySelector('.plu');
-let calcBtnsMin = document.querySelector('.min');
-let calcBtnsMul = document.querySelector('.mul');
-let calcBtnsDiv = document.querySelector('.div');
-let calcBtnsEqu = document.querySelector('.equ');
-let calcBtnsCle = document.querySelector('.cle');
-
 // not sure if this works so test
 let displayValue = 0;
 // let operatorValue = '';
