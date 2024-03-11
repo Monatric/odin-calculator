@@ -36,11 +36,32 @@ function operate(firstNum, operator, secondNum) {
 // console.log(divide(2, 8))
 
 // attempt 1
+let calcBtnsZer = document.querySelector('.zer');
+let calcBtnsOne = document.querySelector('.one');
+let calcBtnsTwo = document.querySelector('.two');
+let calcBtnsThr = document.querySelector('.thr');
+let calcBtnsFou = document.querySelector('.fou');
+let calcBtnsFiv = document.querySelector('.fiv');
+let calcBtnsSix = document.querySelector('.six');
+let calcBtnsSev = document.querySelector('.sev');
+let calcBtnsEig = document.querySelector('.eig');
+let calcBtnsNin = document.querySelector('.nin');
 
+
+let calcBtnsPlu = document.querySelector('.plu');
+let calcBtnsMin = document.querySelector('.min');
+let calcBtnsMul = document.querySelector('.mul');
+let calcBtnsDiv = document.querySelector('.div');
+let calcBtnsEqu = document.querySelector('.equ');
+let calcBtnsCle = document.querySelector('.cle');
+
+console.log(calcBtnsEqu)
+// let calcBtnsContent = calcBtns.textContent;
+let display = document.querySelector('.display');
 
 
 //different attempt 2
-// let calcBtns = document.querySelector('.btn-box');
+// let calcBtns = document.querySelector('');
 // let calcBtnsContent = calcBtns.textContent;
 // let display = document.querySelector('.display');
 // // if (calcBtns === '7') {
@@ -61,7 +82,7 @@ function operate(firstNum, operator, secondNum) {
 //     }
 // })
 
-console.log(calcBtns)
+//console.log(calcBtns)
 
 
 console.log(operate(3, '*', 5))
