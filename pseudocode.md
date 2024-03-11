@@ -46,7 +46,7 @@ document query select display
 add a global variable that stores a 'display value', set it to 0?
 add a global variable that stores the operator, set it to ''?
 add event listener on calcBtns and display the value
-    if it's a number, store it in the displayValue variable
+    if textContent is a number, store it in the displayValue variable
         add innerhtml to display variable
-    if it's an operator, store it in the displayOperator variable
+    if textContent is an operator, store it in the displayOperator variable
         add innerhtml to display variable
