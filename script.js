@@ -36,6 +36,8 @@ function operate(firstNum, operator, secondNum) {
 // console.log(divide(2, 8))
 
 // attempt 1
+let display = document.querySelector('.display');
+
 let calcBtnsZer = document.querySelector('.zer');
 let calcBtnsOne = document.querySelector('.one');
 let calcBtnsTwo = document.querySelector('.two');
@@ -55,9 +57,12 @@ let calcBtnsDiv = document.querySelector('.div');
 let calcBtnsEqu = document.querySelector('.equ');
 let calcBtnsCle = document.querySelector('.cle');
 
+// not sure if this works so test
+let displayValue = 0;
+// let operatorValue = '';
+
 console.log(calcBtnsEqu)
 // let calcBtnsContent = calcBtns.textContent;
-let display = document.querySelector('.display');
 
 
 //different attempt 2
