@@ -50,3 +50,26 @@ add event listener on calcBtns and display the value
         add innerhtml to display variable
     if textContent is an operator, store it in the displayOperator variable
         add innerhtml to display variable
+    
+
+**STEP 6**
+    now that the numbers/operators can populate the display
+
+    store nums in the displayValue as string
+    if an operator is clicked, store it in the operator variable
+        then store the displayValue inside firstNum
+        parseInt 
+        put displayValue to 0
+        put operator in operator variable
+    store nums again in the displayValue as string
+        when equals is clicked, store the displayValue inside secondNum 
+        parseInt 
+        put displayValue to 0 
+        use operate(firstNum, operator, secondNum)
+        display.textContent the result of operation
+
+// new add since months
+if last click ang operators, then disable lahat ng operators
+
+**Your calculator should not evaluate more than a single pair of numbers at a time**
+kung may laman na ang firstnum, operator, at secondnum, pero di pa napindot ang equals,
