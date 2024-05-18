@@ -158,6 +158,10 @@ btnRows.forEach((row) => {
                 break;
             case 'cle':
                 display.textContent = '';
+                firstNum = 0;
+                operator = '';
+                secondNum = 0;
+                displayValue = 0;
                 break;
         }
     })
