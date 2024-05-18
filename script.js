@@ -183,6 +183,7 @@ btnRows.forEach((row) => {
                 secondNum = 0;
                 break;
             case 'cle':
+                // reset everything
                 display.textContent = '';
                 firstNum = 0;
                 operator = '';
