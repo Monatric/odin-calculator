@@ -176,12 +176,12 @@ btnRows.forEach((row) => {
                     console.log("bulok")
                     break;
                 } else {
-                display.textContent += '*';
-                operator = '*';
-                firstNum = parseInt(displayValue);
-                displayValue = 0;
-                // console.log('this is nine')
-                break;
+                    display.textContent += '*';
+                    operator = '*';
+                    firstNum = parseInt(displayValue);
+                    displayValue = 0;
+                    // console.log('this is nine')
+                    break;
                 }
 
             case 'div':
@@ -200,12 +200,12 @@ btnRows.forEach((row) => {
                     console.log("bulok")
                     break;
                 } else {
-                display.textContent += '/';
-                operator = '/';
-                firstNum = parseInt(displayValue);
-                displayValue = 0;
-                //console.log('this is nine')
-                break;
+                    display.textContent += '/';
+                    operator = '/';
+                    firstNum = parseInt(displayValue);
+                    displayValue = 0;
+                    //console.log('this is nine')
+                    break;
                 }
 
             case 'equ':
