@@ -162,10 +162,10 @@ btnRows.forEach((row) => {
                 break;
             case 'equ':
                 secondNum = parseInt(displayValue);
-                displayValue = 0;
                 let results = operate(firstNum, operator, secondNum);
                 display.textContent = results;
-                firstNum = 0;
+                displayValue = results;
+                firstNum = results;
                 operator = '';
                 secondNum = 0;
                 break;
