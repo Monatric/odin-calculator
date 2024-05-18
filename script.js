@@ -159,24 +159,65 @@ btnRows.forEach((row) => {
                     // console.log('this is nine')
                     break;
                 }
+
             case 'mul':
+                //  same comment as plus
+                if ((firstNum != 0) && (operator != '') ) {
+                    secondNum = parseInt(displayValue);
+                    console.log(firstNum, operator,  secondNum)
+                    let results = operate(firstNum, operator, secondNum);
+                    display.textContent = results;
+
+                    firstNum = results;
+                    displayValue = 0;
+
+                    display.textContent += '*';
+                    operator = '*';
+                    console.log("bulok")
+                    break;
+                } else {
                 display.textContent += '*';
                 operator = '*';
                 firstNum = parseInt(displayValue);
                 displayValue = 0;
                 // console.log('this is nine')
                 break;
+                }
+
             case 'div':
+                // same comment as plus
+                if ((firstNum != 0) && (operator != '') ) {
+                    secondNum = parseInt(displayValue);
+                    console.log(firstNum, operator,  secondNum)
+                    let results = operate(firstNum, operator, secondNum);
+                    display.textContent = results;
+
+                    firstNum = results;
+                    displayValue = 0;
+
+                    display.textContent += '/';
+                    operator = '/';
+                    console.log("bulok")
+                    break;
+                } else {
                 display.textContent += '/';
                 operator = '/';
                 firstNum = parseInt(displayValue);
                 displayValue = 0;
                 //console.log('this is nine')
                 break;
+                }
+
             case 'equ':
+                // assign the second displayvalue to second num
+                // then calculate
                 secondNum = parseInt(displayValue);
                 let results = operate(firstNum, operator, secondNum);
+                
+                // show the text with  results
                 display.textContent = results;
+
+                // assign the next displayValue to results
                 displayValue = results;
                 firstNum = results;
                 operator = '';
