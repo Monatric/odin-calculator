@@ -218,10 +218,9 @@ btnRows.forEach((row) => {
                 let results = operate(firstNum, operator, secondNum);
                 
                 // show the text with  results
-                //  round off immediately regardless of operators
+                // round off immediately regardless of operators
                 results = Math.round(results * 100) / 100;
                 display.textContent = results;
-
 
                 // assign the next displayValue to results
                 displayValue = results;
@@ -229,6 +228,7 @@ btnRows.forEach((row) => {
                 operator = '';
                 secondNum = 0;
                 break;
+                
             case 'cle':
                 // reset everything
                 display.textContent = '';
