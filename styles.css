@@ -30,6 +30,7 @@ body {
     /* flex-grow: 1; */
     flex-direction: column;
     min-width: 225px;
+    gap: 0.5rem;
 }
 
 .display {
@@ -38,6 +39,7 @@ body {
     align-items: end;
     width: 100%;
     min-height: 100px;
+    border-radius: 8px;
 }
 
 .btn-row {
@@ -54,6 +56,22 @@ body {
     align-items: center;
     width: 100%;
     border-radius: 8px;
+}
+
+.cle, .equ {
+    background-color: #a5a5a5;
+}
+
+.plu, .min, .mul, .div {
+    background-color: #fda009;
+    color: #fff;
+}
+
+.zer, .one, .two, .thr,
+.fou, .fiv, .six, .sev,
+.eig, .nin {
+    background-color: #343434;
+    color: #fff;
 }
 
 /* .btn-box.equal {
