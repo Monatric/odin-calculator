@@ -107,9 +107,7 @@ btnRows.forEach((row) => {
             case 'plu':
                 if ((firstNum != 0) && (operator != '') ) {
                     secondNum = parseInt(displayValue);
-
                     console.log(firstNum, operator,  secondNum)
-                    
                     let results = operate(firstNum, operator, secondNum);
                     display.textContent = results;
                     firstNum = results;
@@ -126,13 +124,28 @@ btnRows.forEach((row) => {
                     console.log(operator)
                     break;
                 }
+
             case 'min':
-                display.textContent += '-';
-                operator = '-';
-                firstNum = parseInt(displayValue);
-                displayValue = 0;
-                // console.log('this is nine')
-                break;
+                if ((firstNum != 0) && (operator != '') ) {
+                    secondNum = parseInt(displayValue);
+                    console.log(firstNum, operator,  secondNum)
+                    let results = operate(firstNum, operator, secondNum);
+                    display.textContent = results;
+                    firstNum = results;
+                    displayValue = 0;
+                    display.textContent += '-';
+                    operator = '-';
+                    console.log("bulok")
+                    break;
+                } else {
+
+                    display.textContent += '-';
+                    operator = '-';
+                    firstNum = parseInt(displayValue);
+                    displayValue = 0;
+                    // console.log('this is nine')
+                    break;
+                }
             case 'mul':
                 display.textContent += '*';
                 operator = '*';
