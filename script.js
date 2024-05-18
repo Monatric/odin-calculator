@@ -50,6 +50,9 @@ let displayValue = 0;
 
 btnRows.forEach((row) => {
     row.addEventListener('click', (event) => {
+        display.style.color = '#fff';
+        display.style.fontSize = '3rem';
+
         let target = event.target;
         switch (target.id) {
             // 0-9
