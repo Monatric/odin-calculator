@@ -67,3 +67,9 @@ add event listener on calcBtns and display the value
         put displayValue to 0 
         use operate(firstNum, operator, secondNum)
         display.textContent the result of operation
+
+// new add since months
+if last click ang operators, then disable lahat ng operators
+
+**Your calculator should not evaluate more than a single pair of numbers at a time**
+kung may laman na ang firstnum, operator, at secondnum, pero di pa napindot ang equals,
