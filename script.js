@@ -190,6 +190,9 @@ btnRows.forEach((row) => {
                     secondNum = parseInt(displayValue);
                     console.log(firstNum, operator,  secondNum)
                     let results = operate(firstNum, operator, secondNum);
+
+                    // round off
+                    results = Math.round(results * 100) / 100;
                     display.textContent = results;
 
                     firstNum = results;
@@ -215,7 +218,10 @@ btnRows.forEach((row) => {
                 let results = operate(firstNum, operator, secondNum);
                 
                 // show the text with  results
+                //  round off immediately regardless of operators
+                results = Math.round(results * 100) / 100;
                 display.textContent = results;
+
 
                 // assign the next displayValue to results
                 displayValue = results;
