@@ -1,3 +1,5 @@
+// start initializing the three main  parameters
+// functions for operations
 let firstNum = 0;
 let secondNum = 0;
 let operator = '';
@@ -30,26 +32,15 @@ function operate(firstNum, operator, secondNum) {
     }
 }
 
-// console.log(add(2, 1))
-// console.log(subtract(1, 2))
-// console.log(multiply(2, 1))
-// console.log(divide(2, 8))
-
-// attempt 1
-
-// not sure if this works so test
-// let operatorValue = '';
-
-// let calcBtnsContent = calcBtns.textContent;
-
-
-//different attempt 2
+// call the buttons and calculator display
 let btnRows = document.querySelectorAll('.btn-row');
 let display = document.querySelector('.display');
 let displayValue = 0;
 
+// delegate events
 btnRows.forEach((row) => {
     row.addEventListener('click', (event) => {
+        // set the default style for texts
         display.style.color = '#fff';
         display.style.fontSize = '3rem';
 
@@ -63,47 +54,38 @@ btnRows.forEach((row) => {
             case 'one':
                 display.textContent += '1';
                 displayValue += '1';
-                console.log(displayValue)
                 break;
             case 'two':
                 display.textContent += '2';
                 displayValue += '2';
-                console.log('this is two')
                 break;
             case 'thr':
                 display.textContent += '3';
                 displayValue += '3';
-                console.log('this is three')
                 break;
             case 'fou':
                 display.textContent += '4';
                 displayValue += '4';
-                console.log('this is four')
                 break;
             case 'fiv':
                 display.textContent += '5';
                 displayValue += '5';
-                console.log('this is five')
                 break;
             case 'six':
                 display.textContent += '6';
                 displayValue += '6';
-                console.log('this is six')
                 break;
             case 'sev':
                 display.textContent += '7';
                 displayValue += '7';
-                console.log('this is seven')
                 break;
             case 'eig':
                 display.textContent += '8';
                 displayValue += '8';
-                console.log('this is eight')
                 break;
             case 'nin':
                 display.textContent += '9';
                 displayValue += '9';
-                console.log('this is nine')
                 break;
             
             // operators
@@ -114,7 +96,6 @@ btnRows.forEach((row) => {
                     // assign the displayed value to secondNum
                     // calculate
                     secondNum = parseInt(displayValue);
-                    console.log(firstNum, operator,  secondNum)
                     let results = operate(firstNum, operator, secondNum);
                     display.textContent = results;
                     
@@ -125,8 +106,8 @@ btnRows.forEach((row) => {
                     
                     display.textContent += '+';
                     operator = '+';
-                    console.log("bulok")
                     break;
+
                 } else {
                     display.textContent += '+';
                     operator = '+';
@@ -135,7 +116,6 @@ btnRows.forEach((row) => {
                     // then reset to 0
                     firstNum = parseInt(displayValue);
                     displayValue = 0;
-                    console.log(operator)
                     break;
                 }
 
@@ -143,7 +123,6 @@ btnRows.forEach((row) => {
                 // same comment as plus
                 if ((firstNum != 0) && (operator != '') ) {
                     secondNum = parseInt(displayValue);
-                    console.log(firstNum, operator,  secondNum)
                     let results = operate(firstNum, operator, secondNum);
                     display.textContent = results;
 
@@ -152,14 +131,13 @@ btnRows.forEach((row) => {
 
                     display.textContent += '-';
                     operator = '-';
-                    console.log("bulok")
                     break;
+
                 } else {
                     display.textContent += '-';
                     operator = '-';
                     firstNum = parseInt(displayValue);
                     displayValue = 0;
-                    // console.log('this is nine')
                     break;
                 }
 
@@ -167,7 +145,6 @@ btnRows.forEach((row) => {
                 //  same comment as plus
                 if ((firstNum != 0) && (operator != '') ) {
                     secondNum = parseInt(displayValue);
-                    console.log(firstNum, operator,  secondNum)
                     let results = operate(firstNum, operator, secondNum);
                     display.textContent = results;
 
@@ -176,14 +153,13 @@ btnRows.forEach((row) => {
 
                     display.textContent += '*';
                     operator = '*';
-                    console.log("bulok")
                     break;
+
                 } else {
                     display.textContent += '*';
                     operator = '*';
                     firstNum = parseInt(displayValue);
                     displayValue = 0;
-                    // console.log('this is nine')
                     break;
                 }
 
@@ -191,7 +167,6 @@ btnRows.forEach((row) => {
                 // same comment as plus
                 if ((firstNum != 0) && (operator != '') ) {
                     secondNum = parseInt(displayValue);
-                    console.log(firstNum, operator,  secondNum)
                     let results = operate(firstNum, operator, secondNum);
 
                     // round off
@@ -203,14 +178,13 @@ btnRows.forEach((row) => {
 
                     display.textContent += '/';
                     operator = '/';
-                    console.log("bulok")
                     break;
+
                 } else {
                     display.textContent += '/';
                     operator = '/';
                     firstNum = parseInt(displayValue);
                     displayValue = 0;
-                    //console.log('this is nine')
                     break;
                 }
 
@@ -219,6 +193,8 @@ btnRows.forEach((row) => {
                 // then calculate
                 secondNum = parseInt(displayValue);
                 let results = operate(firstNum, operator, secondNum);
+
+                // in case they divide to zero
                 if (results == 'Infinity') {
                     display.textContent = 'lol'
                     break;
@@ -247,6 +223,3 @@ btnRows.forEach((row) => {
         }
     })
 })
-
-
-console.log(operate(3, '*', 5))
