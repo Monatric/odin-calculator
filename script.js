@@ -216,7 +216,11 @@ btnRows.forEach((row) => {
                 // then calculate
                 secondNum = parseInt(displayValue);
                 let results = operate(firstNum, operator, secondNum);
-                
+                if (results == 'Infinity') {
+                    display.textContent = 'lol'
+                    break;
+                }
+
                 // show the text with  results
                 // round off immediately regardless of operators
                 results = Math.round(results * 100) / 100;
@@ -228,7 +232,7 @@ btnRows.forEach((row) => {
                 operator = '';
                 secondNum = 0;
                 break;
-                
+
             case 'cle':
                 // reset everything
                 display.textContent = '';
