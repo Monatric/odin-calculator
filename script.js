@@ -105,13 +105,21 @@ btnRows.forEach((row) => {
             
             // operators
             case 'plu':
+                // if firstNum and operator exists and this is clicked,
+                // then add the firstNum and secondNum already
                 if ((firstNum != 0) && (operator != '') ) {
+                    // assign the displayed value to secondNum
+                    // calculate
                     secondNum = parseInt(displayValue);
                     console.log(firstNum, operator,  secondNum)
                     let results = operate(firstNum, operator, secondNum);
                     display.textContent = results;
+                    
+                    // assign the results to firstNum for continuous calculation
+                    // then reset to 0
                     firstNum = results;
                     displayValue = 0;
+                    
                     display.textContent += '+';
                     operator = '+';
                     console.log("bulok")
@@ -119,6 +127,9 @@ btnRows.forEach((row) => {
                 } else {
                     display.textContent += '+';
                     operator = '+';
+
+                    // on first click, assign the displayed value to firstNum
+                    // then reset to 0
                     firstNum = parseInt(displayValue);
                     displayValue = 0;
                     console.log(operator)
@@ -126,19 +137,21 @@ btnRows.forEach((row) => {
                 }
 
             case 'min':
+                // same comment as plus
                 if ((firstNum != 0) && (operator != '') ) {
                     secondNum = parseInt(displayValue);
                     console.log(firstNum, operator,  secondNum)
                     let results = operate(firstNum, operator, secondNum);
                     display.textContent = results;
+
                     firstNum = results;
                     displayValue = 0;
+
                     display.textContent += '-';
                     operator = '-';
                     console.log("bulok")
                     break;
                 } else {
-
                     display.textContent += '-';
                     operator = '-';
                     firstNum = parseInt(displayValue);
