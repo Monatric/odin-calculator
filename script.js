@@ -1,7 +1,7 @@
 // start initializing the three main  parameters
 // functions for operations
-let firstNum = 0;
-let secondNum = 0;
+let firstNum = '';
+let secondNum = '';
 let operator = '';
 
 function add(operand1, operand2) {
@@ -197,6 +197,8 @@ btnRows.forEach((row) => {
                 // in case they divide to zero
                 if (results == 'Infinity') {
                     display.textContent = 'lol'
+                    break;
+                } else if (secondNum == '' || operator == '') {
                     break;
                 }
 
